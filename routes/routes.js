@@ -53,6 +53,7 @@ exports.upload = (req, res, next) => {
     else {
         Heading = "Attendance(In thousands)";
     }
+    dropdown = req.body.dropdown
 }
 
 exports.drawChart = (req, res, next) => {
@@ -81,7 +82,7 @@ exports.drawChart = (req, res, next) => {
     goalsScored = [];
     attendance = [];
     Heading = "";
-    dropdown = 1;
+    dropdown = 0;
 }
 
 

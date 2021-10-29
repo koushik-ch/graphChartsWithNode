@@ -19,12 +19,11 @@
     </div>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
-
         var years = <%= JSON.stringify(years) %>
         <% if (dropdown == '1') {%>
         var data =<%= JSON.stringify(goalsScored) %>
-        <%} else {%>
-        var data =<%= JSON.stringify(goalsConceded) %>
+        <%} else if (dropdown == '2') {%>
+        var data =<%= JSON.stringify(attendance) %>
         <%}%>
         var myChart = new Chart(ctx, {
             type: 'bar',
